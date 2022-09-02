@@ -1,0 +1,17 @@
+package java01;
+
+import java.util.Arrays;
+
+public class Asending {
+
+	public static void main(String[] args) {
+		
+		
+		int[] a= {22,43,12,34,87,89,23};
+		
+		Arrays.sort(a);
+		
+		System.out.println(Arrays.toString(a));
+	}
+
+}
