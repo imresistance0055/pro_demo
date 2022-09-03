@@ -5,7 +5,7 @@ public class Adding {
 	public static void main(String[] args) {
 		
 		
-		int[] a= {3,4,5,6};
+		Integer [] a= {3,4,5,6};
 		
 		int sum=0;
 		
