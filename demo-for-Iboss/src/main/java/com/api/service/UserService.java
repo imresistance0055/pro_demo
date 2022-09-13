@@ -29,14 +29,22 @@ public class UserService {
 		return repo.findById(id).orElse(null);
 	}
 
-	public List<User> getByUserNameOrAddress(String name,String address) {
+	public List<User> getByUserNameOrAddress(String name, String address) {
 
 		return repo.getByUserNameOrAddress(name, address);
 	}
-	
-	public List<User> getByUserContact(Integer contact){
-		
+
+	public List<User> getByUserContact(Integer contact) {
+
 		return repo.getByUsercontact(contact);
 	}
+	
+	public List<User> getByUserName(String name) {
 
+		return repo.getByUserName(name);
+	}
+	
+	
+
+	
 }

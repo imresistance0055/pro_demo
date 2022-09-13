@@ -18,4 +18,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query("select e from userdetails e where e.contact=?1")
 	public List<User> getByUsercontact(Integer contact);
 	
+	@Query("select e from userdetails e where e.name=?1")
+	public List<User> getByUserName(String name);
+	
+	
 }

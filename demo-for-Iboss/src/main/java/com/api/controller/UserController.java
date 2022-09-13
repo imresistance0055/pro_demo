@@ -38,15 +38,35 @@ public class UserController {
 		return service.getById(id);
 	}
 
-	@GetMapping("api/req/{name}/{address}")
+	@GetMapping("/getUserByName/{address}")
 	public List<User> getUserByName(@PathVariable String name, @PathVariable String address) {
 
 		return service.getByUserNameOrAddress(name, address);
 	}
-	
-	@GetMapping("/api/req/{contact}")
-	public List<User> getByUserContact(@PathVariable Integer contact){
-		
+
+	@GetMapping("/getByUserContact/{contact}")
+	public List<User> getByUserContact(@PathVariable Integer contact) {
+
 		return service.getByUserContact(contact);
+
 	}
+	
+
+	@GetMapping("/getByUserNameOrAddress/{name}/{address}")
+	public List<User> getByUserNameOrAddress(@PathVariable String name,@PathVariable String address) {
+
+		return service.getByUserNameOrAddress(name,address);
+
+	}
+	
+	@GetMapping("/getByUserName/{name}")
+	public List<User> getByUserName(@PathVariable String name) {
+
+		return service.getByUserName(name);
+
+	}
+	
+	
+
+	
 }
